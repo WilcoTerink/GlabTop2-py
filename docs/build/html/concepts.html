@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Concepts &mdash; GlabTop2-py 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Welcome to the documentation of “GlabTop2-py”" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> GlabTop2-py
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glabtop2">GlabTop2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glabtop2-py-processing-steps">GlabTop2-py processing steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#input-requirements">Input requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processing-steps">Processing steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output">Output</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">Running GlabTop2-py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GlabTop2-py</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Concepts</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/concepts.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="concepts">
+<span id="id1"></span><h1>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>For glacier-fed river basins it is often difficult to estimate the volume of glacier ice that can potentially contribute
+to the generation of streamflow. Several methods are availble to estimate glacier volumes. E.g., <a class="reference internal" href="references.html#bahr1997" id="id2">[1]</a> performed a
+scaling analysis of the mass and momentum conservation equations and showed that glacier volumes can be related by a power
+law to more easily observed glacier surface areas. The disadvantage of this approach is that it is a lumped method and can
+therefore not be applied on a gridded surface. Another method is described by <a class="reference internal" href="references.html#huss2010" id="id3">[3]</a>, who uses a <span class="math notranslate nohighlight">\(\Delta\)</span> h-parameterization
+to describe the spatial distribution of the glacier surface elevation change in response to a change in mass balance. It is an
+empirical glacier-specific function derived from observations in the past that can easily be applied to large samples of glaciers.
+However, a disadvantage of this methodology is that a large number of observations (multiple DEMs of the same glacier) from the past is required.
+<a class="reference internal" href="references.html#weertman1957" id="id4">[6]</a> and <a class="reference internal" href="references.html#immerzeel2012b" id="id5">[4]</a> described another method, known as Weertman sliding <a class="reference internal" href="references.html#weertman1957" id="id6">[6]</a>. The disavantage
+of this method is that it is only feasible at high spatial model resolutions (&lt;100 m), and it ignores viscous deformation. A good overview
+of the methods that are available for estimating ice volumes is well-described in <a class="reference internal" href="references.html#frey2014" id="id7">[2]</a>.</p>
+<p>The first version of GlabTop (<strong>Gla</strong>cier <strong>b</strong>ed <strong>Top</strong>ography) <a class="reference internal" href="references.html#linsbauer2012" id="id8">[5]</a> assessed the spatial distribution of ice-thickness
+by estimating  the  glacier  depths  at several points along so-called glacier branch lines. Ice-thicknesses at  these  base  points  are
+calculated  using Eq. <a class="reference internal" href="#equation-eq-h">(1)</a> and Eq. <a class="reference internal" href="#equation-eq-tau">(2)</a>. Ice-thickness distribution is then derived by interpolating between these points and the glacier
+margins.</p>
+<div class="math notranslate nohighlight" id="equation-eq-h">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-h" title="Permalink to this equation">¶</a></span>\[h_f = \frac{\tau}{f\cdot \rho \cdot g \cdot \sin(\alpha)}\]</div>
+<p>with:</p>
+<div class="math notranslate nohighlight">
+\begin{eqnarray}
+h_f&amp; =&amp; \text{mean ice-thickness along the central flowline}\ [m]\\
+\tau&amp; =&amp; \text{average basal shear stress along the central flowline}\ [kPa]\\
+f&amp; =&amp; \text{shape factor}\ [-]\\
+\rho&amp; =&amp; \text{ice density}\ [kg\ m^{-3}]\\
+g&amp; =&amp; \text{gravitational acceleration}\ [m\ s^{-2}]\\
+\alpha&amp; = &amp; \text{mean surface slope along the central flowline}\ [degrees]
+\end{eqnarray}</div><div class="math notranslate nohighlight" id="equation-eq-tau">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-tau" title="Permalink to this equation">¶</a></span>\[\begin{split}\tau\left[kPa\right] = \left\{
+\begin{eqnarray}
+0.5 + 159.81\Delta{H} − 43.5\Delta{H}^2 &amp; \ \ \text{:if}\ \Delta{H} \le 1.6\ km\\
+150 &amp; \ \ \text{:if}\ \Delta{H} \gt 1.6\ km
+\end{eqnarray}\right\}\end{split}\]</div>
+<p>with:</p>
+<div class="math notranslate nohighlight">
+\begin{eqnarray}
+\tau&amp; =&amp; \text{average basal shear stress along the central flowline}\ [kPa]\\
+\Delta{H}&amp; =&amp; \text{elevation range}\ [km]
+\end{eqnarray}</div></div>
+<div class="section" id="glabtop2">
+<h2>GlabTop2<a class="headerlink" href="#glabtop2" title="Permalink to this headline">¶</a></h2>
+<p>GlabTop2 <a class="reference internal" href="references.html#frey2014" id="id9">[2]</a> is mostly similar to GlabTop, but it avoids the laborious process of manually drawing branch lines. Instead, ice-thickness
+is calculated for an automated selection of randomly picked DEM cells within the glacierized areas. Ice-thickness distribution for all
+glacier cells is then interpolated from the ice-thickness at the random cells and from ice-thickness at the glacier margins, known to be zero.
+The calculation of ice-thickness is grid-based and only requires a DEM and the glacier mask as input (<a class="reference internal" href="#fig-glabtop2-illustration"><span class="std std-numref">Figure 1</span></a>).</p>
+<div class="figure align-default" id="id15" style="width: 70%">
+<span id="fig-glabtop2-illustration"></span><img alt="Schematic illustration of GlabTop2." src="_images/GlabTop2_schematic_illustration.png" />
+<p class="caption"><span class="caption-number">Figure 1 </span><span class="caption-text">Schematic illustration of GlabTop2 <a class="reference internal" href="references.html#frey2014" id="id10">[2]</a>. Glacier polygons (blue curved line) are converted to a
+raster matching the DEM cells (red outline). Cells are discriminated as inner glacier cells (light blue), glacier
+marginal cells (powder-blue), glacier adjacent cells (yellow), and non-glacier cells (white). Auburn cells represent
+randomly selected cells (<em>r</em>) for which local ice-thickness is calculated; the blue square symbolizes the buffer of
+variable size, which is enlarged (dashed blue square), until an elevation extent of <em>hmin</em> is reached within the buffer.
+Source: <a class="reference internal" href="references.html#frey2014" id="id11">[2]</a>.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+<p>The ice-thickness calculation with GlabTop2 requires estimating the parameters <span class="math notranslate nohighlight">\(\tau\)</span> (basal shear stress) and the shape factor <em>f</em>. Like in the
+slope-dependent ice-thickness estimation approach, <span class="math notranslate nohighlight">\(\tau\)</span> is parameterized  with  the  vertical  glacier extent <span class="math notranslate nohighlight">\(\Delta{H}\)</span> (Eq. <a class="reference internal" href="#equation-eq-tau">(2)</a>)
+and <em>f</em> is generally set to 0.8 for all glaciers (<a class="reference internal" href="references.html#willis1996" id="id12">[7]</a>).</p>
+<p>A detailed explanation of the GlabTop2 modelling steps is described in Appendix A of <a class="reference internal" href="references.html#frey2014" id="id13">[2]</a>. GlabTop2-py integrates those steps into a Python package. The
+GlabTop2-py processing steps are described in the section below.</p>
+</div>
+<div class="section" id="glabtop2-py-processing-steps">
+<span id="glabtop2-py-steps"></span><h2>GlabTop2-py processing steps<a class="headerlink" href="#glabtop2-py-processing-steps" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="input-requirements">
+<h3>Input requirements<a class="headerlink" href="#input-requirements" title="Permalink to this headline">¶</a></h3>
+<p>After GlabTop2-py has been installed you need to edit the <code class="docutils literal notranslate"><span class="pre">config.cfg</span></code> file. Here you can set the paths where the input files can be found, and modify the GlabTop2-py
+model parameters. GlabTop2-py requires the following input:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>A shapefile with the outlines of the glaciers within your area of interest. The <a class="reference external" href="https://www.glims.org/RGI/">Randolph Glacier Inventory (RGI)</a> is a recommended source for this.
+Make sure the shapefile attribute table contains a <code class="docutils literal notranslate"><span class="pre">GLACID</span></code> column, which should be unique for each record in the attribute table.</p></li>
+<li><p>A high-resolution DEM in PCRaster format (pcraster scalar).</p></li>
+<li><p>Gridded map of glacier outlines (of glaciers found in the shapefile under 1)). This map should have the same extent and spatial resolution of the DEM, and should be
+formatted as a nominal PCRaster map.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="processing-steps">
+<h3>Processing steps<a class="headerlink" href="#processing-steps" title="Permalink to this headline">¶</a></h3>
+<p>This section describes the steps that are processed in GlabTop2-py. These steps are copied from <a class="reference internal" href="references.html#frey2014" id="id14">[2]</a>.</p>
+<p>An initial approximation of ice-thickness is calculated for an automated selection of randomly picked DEM cells within the glacierized area.
+Ice-thickness distribution for all glacier cells is then interpolated from:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The ice-thickness guesses at the  random cells and</p></li>
+<li><p>The  glacier  margins  where  ice-thickness is known to be zero.</p></li>
+</ol>
+</div></blockquote>
+<p>The calculation of ice-thickness is grid-based and requires a  DEM  and  the  glacier  mask (shapefile and gridded) as  input. In a first step, all groups
+of glaciers sharing common borders, i.e., glacier complexes, are assigned a unified ID. All following steps are performed for one ID (i.e., all cells of a glacier complex)
+at a time, disregarding all cells of differing IDs.</p>
+<p>A second mask is generated where a code is assigned to all non-glacier cells directly adjacent to the glacier
+cells (called “glacier-adjacent cells”, see <a class="reference internal" href="#fig-glabtop2-illustration"><span class="std std-numref">Figure 1</span></a> for a schematic illustration of the model).</p>
+<p>A different code is assigned to all glacier
+cells being located directly at the glacier margin (called “marginal glacier cells”).</p>
+<p>From the remaining glacier cells (“inner glacier cells”) a set of random cells
+are drawn whereas their number corresponds to a predefined percentage (<span class="math notranslate nohighlight">\(r\)</span>) of the inner glacier cells. An initial buffer of 3×3 cells is then laid around each random
+cell and  each  individual  buffer  is  enlarged  until  the  difference in elevation between the lowest and the highest DEM cell falling within the buffer is equal
+or greater <span class="math notranslate nohighlight">\(hmin\)</span>. Thereby all  glacier  cells  in  the  buffer  (marginal and  non-marginal) are considered. The mean surface slope of all glacier cells in the buffer
+is used to calculate an initial guess of local ice-thickness according to Eq. <a class="reference internal" href="#equation-eq-h">(1)</a> and the result is assigned to the corresponding random cell, to which the
+buffer has been applied. Extending every buffer to a minimum elevation difference of <span class="math notranslate nohighlight">\(hmin\)</span> avoids in most cases (in particular in mountainous terrain) very small slope
+values with corresponding extremely high ice-thicknesses and thus makes a slope cut-off (i.e., a minimum local slope considered) redundant.</p>
+<p>From the ice-thickness guesses at all random cells and an ice-thickness value <span class="math notranslate nohighlight">\(h_{ga}\)</span> assigned to all glacier adjacent cells, ice-thickness is interpolated to
+all glacier cells using inverse distance weighting (IDW). The ice-thickness calculation for each ID is repeated <span class="math notranslate nohighlight">\(n\)</span> times with different sets of random points and then ice-thickness
+distributions are averaged into a final estimate of ice-thickness distribution.</p>
+</div>
+<div class="section" id="output">
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
+<p>GlabTop2-py provides the following output:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>PCRaster scalar map with ice depths for each grid cell (see example of <a class="reference internal" href="#fig-example-glabtop2-map"><span class="std std-numref">Figure 2</span></a>).</p></li>
+<li><p>A csv-file with for each glacier (GLACID) some properties (see example of <a class="reference internal" href="#fig-example-glabtop2-csv"><span class="std std-numref">Figure 3</span></a>).</p></li>
+</ol>
+</div></blockquote>
+<div class="figure align-default" id="id16" style="width: 75%">
+<span id="fig-example-glabtop2-map"></span><img alt="Example of glacier ice depth map as generated by GlabTop2-py." src="_images/example_ice_depths.png" />
+<p class="caption"><span class="caption-number">Figure 2 </span><span class="caption-text">Example of glacier ice depth map as generated by GlabTop2-py.</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id17" style="width: 75%">
+<span id="fig-example-glabtop2-csv"></span><img alt="Example of glacier properties per GLACID in a csv-file as generated by GlabTop2-py." src="_images/example_csv_output.png" />
+<p class="caption"><span class="caption-number">Figure 3 </span><span class="caption-text">Example of glacier properties per GLACID in a csv-file as generated by GlabTop2-py.</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the documentation of “GlabTop2-py”" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Wilco Terink
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
