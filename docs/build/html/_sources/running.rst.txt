@@ -7,16 +7,16 @@ Running GlabTop2-py
 This section describes how you can run GlabTop2-py. How-to run the tool depends on the way you have installed
 GlabTop2-py:
 
-    1. Installation via :ref:`pip <installation_pip>`
+    1. Installation via :ref:`Anaconda <installation_anaconda>` or :ref:`pip <installation_pip>`
     
     2. Installation using the download from the :ref:`GitHub repository <installation_github>`
     
 See ONE of the sections below for how-to run GlabTop2-py depending on the chosen installation method.
 
-Run via pip installation
-------------------------
+Run via Anaconda or pip installation
+------------------------------------
 
-If you have installed GlabTop2-py via pip, then you can run GlabTop2-py from any location
+If you have installed GlabTop2-py via Anaconda or pip, then you can run GlabTop2-py from any location
 on your PC; i.e. you do not need to refer to the physical address where the GlabTop2-py source code resides.
 This is an advantage, because you do not need to copy all the source code files everytime you start
 a new project.

@@ -10,7 +10,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 name = 'GlabTop2-py'
 main_package = 'GlabTop2'
 # datasets = 'datasets'
-version = '2.0.0'
+version = '2.0.1'
 descrip = 'GlabTop2 (Glacier bed Topography) model'
 
 try:
@@ -134,7 +134,7 @@ setup(
     # project page. What does your project relate to?
     #
     # Note that this is a string of words separated by whitespace, not a list.
-    keywords='Spatial Processes Hydrology Model Spatially-distributed pcraster',  # Optional
+    keywords='GlabTop2 Glacier bed Topography model pcraster ice thickness distribution Randolph Glacier Inventory',  # Optional
 
     # You can just specify package directories manually here if your project is
     # simple. Or you can use find_packages().

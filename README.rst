@@ -13,7 +13,11 @@ Reference documentation can be found `here <https://glabtop2-py.readthedocs.io/e
 Installation
 ------------
 
-GlabTop2-py can be installed via pip::
+GlabTop2-py can be installed via Anaconda::
+
+   conda install -c WilcoTerink GlabTop2-py
+
+or via pip::
 
    pip install GlabTop2-py
    
@@ -21,7 +25,7 @@ GlabTop2-py can be installed via pip::
 Run GlabTop2-py
 ---------------
 
-After installation via pip, the tool can be executed by::
+After installation via Anaconda or pip, the tool can be executed by::
 
    python -m GlabTop2.main -i config.cfg   
    

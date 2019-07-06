@@ -88,6 +88,12 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#anaconda">Anaconda</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#about-anaconda">About Anaconda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-anaconda">Download Anaconda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-glabtop2-py-using-anaconda">Install GlabTop2-py using Anaconda</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#pip">pip</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#about-pip">About pip</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#install-glabtop2-py-using-pip">Install GlabTop2-py using pip</a></li>
@@ -170,21 +176,78 @@
 <p><a class="reference external" href="http://pcraster.geo.uu.nl/downloads/latest-release/">http://pcraster.geo.uu.nl/downloads/latest-release/</a></p>
 <p>GlabTop2-py was developed using PCRaster version 4.2.1 and Python 3.6 (both 64 bits).</p>
 </div>
-<p>This page describes how you can install GlabTop2-py. There are two ways of installing GlabTop2-py:</p>
+<p>This page describes how you can install GlabTop2-py. There are three ways of installing GlabTop2-py:</p>
 <blockquote>
 <div><ol class="arabic">
+<li><p>Install via <a class="reference internal" href="#installation-anaconda"><span class="std std-ref">Anaconda</span></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">WilcoTerink</span> <span class="n">GlabTop2</span><span class="o">-</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
 <li><p>Install via <a class="reference internal" href="#installation-pip"><span class="std std-ref">pip</span></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">GlabTop2</span><span class="o">-</span><span class="n">py</span>
 </pre></div>
 </div>
 </li>
+</ol>
+<ol class="arabic simple" start="2">
 <li><p>Downloading the source code from the <a class="reference external" href="https://github.com/WilcoTerink/GlabTop2-py">GlabTop2-py GitHub repository</a></p></li>
 </ol>
 </div></blockquote>
 <p>Each of these installation methods is described in detail in the sections below. The recommended installation is the
-<strong>pip</strong> method.</p>
+<strong>Anaconda</strong> method.</p>
+<div class="section" id="anaconda">
+<span id="id2"></span><h2>Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="about-anaconda">
+<h3>About Anaconda<a class="headerlink" href="#about-anaconda" title="Permalink to this headline">¶</a></h3>
+<p>Anaconda is the world’s most popular Python/R data science platform. The open-source Anaconda distribution is the easiest way
+to perform Python/R data science and machine learning on Linux, Windows, and Mac OS X. With over 11 million users worldwide, it
+is the industry standard for developing, testing, and training on a single machine, enabling individual data scientists to:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Quickly download 1,500+ Python/R data science packages</p></li>
+<li><p>Manage libraries, dependencies, and environments with Conda</p></li>
+<li><p>Develop and train machine learning and deep learning models with scikit-learn, TensorFlow, and Theano</p></li>
+<li><p>Analyze data with scalability and performance with Dask, NumPy, pandas, and Numba</p></li>
+<li><p>Visualize results with Matplotlib, Bokeh, Datashader, and Holoviews</p></li>
+</ul>
+</div></blockquote>
+<p>More information about the Anaconda distribution can be found <a class="reference external" href="https://www.anaconda.com/distribution/">here</a>.</p>
+</div>
+<div class="section" id="download-anaconda">
+<h3>Download Anaconda<a class="headerlink" href="#download-anaconda" title="Permalink to this headline">¶</a></h3>
+<p>It is strongly recommended to use the Anaconda Python distribution to install and manage all your Python packages. The reason for
+this is because Anaconda checks for dependencies, installs missing dependencies or updates old depencies if required. Use the link below to
+download Anaconda Python:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://repo.anaconda.com/archive/Anaconda3-2019.03-Windows-x86_64.exe">Python</a></p></li>
+</ul>
+</div></blockquote>
+<p>By default this installs Python version 3.7. Momentarily, PCRaster only works with Python version 3.6. Therefore, you need to downgrade the Python installation using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-glabtop2-py-using-anaconda">
+<span id="installation-anaconda"></span><h3>Install GlabTop2-py using Anaconda<a class="headerlink" href="#install-glabtop2-py-using-anaconda" title="Permalink to this headline">¶</a></h3>
+<p>Once you have PCRaster and Anaconda installed you can easily install GlabTop2-py via the command prompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">WilcoTerink</span> <span class="n">GlabTop2</span><span class="o">-</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>The command above will always install the most recent GlabTop2-py release. Upgrading an already installed GlabTop2-py distribution
+to the most recent release can be achieved by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="o">-</span><span class="n">c</span> <span class="n">WilcoTerink</span> <span class="n">GlabTop2</span><span class="o">-</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>After you have installed GlabTop2-py, the package resides under:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PATH</span><span class="o">-</span><span class="n">TO</span><span class="o">-</span><span class="n">YOUR</span><span class="o">-</span><span class="n">ANACONDA</span><span class="o">-</span><span class="n">INSTALLATION</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">GlabTop2</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="pip">
-<span id="id2"></span><h2>pip<a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h2>
+<span id="id3"></span><h2>pip<a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="about-pip">
 <h3>About pip<a class="headerlink" href="#about-pip" title="Permalink to this headline">¶</a></h3>
 <p>pip is the package installer for Python. You can use pip to install packages from the <a class="reference external" href="https://pypi.org/">Python Package Index</a> and other indexes.
@@ -219,7 +282,7 @@ to the most recent release can be achieved by:</p>
 </div></blockquote>
 <p>You can download the release you want, and extract the contents to a folder on your hard drive.
 GlabTop2-py can then be run from inside this folder.</p>
-<p>Installation by this method, however, is not recommended because it does not check for the dependencies that are required to run GlabTop2-py, whereas the <a class="reference internal" href="#pip"><span class="std std-ref">pip</span></a>
+<p>Installation by this method, however, is not recommended because it does not check for the dependencies that are required to run GlabTop2-py, whereas the <a class="reference internal" href="#anaconda"><span class="std std-ref">Anaconda</span></a>
 installation method does.</p>
 </div>
 </div>

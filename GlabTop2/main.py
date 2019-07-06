@@ -20,8 +20,8 @@
 #-Authorship information-########################################################################################################################
 __author__ = 'Wilco Terink'
 __copyright__ = 'Wilco Terink'
-__version__ = '2.0.0'
-__date__ ='June 2018'
+__version__ = '2.0.1'
+__date__ ='July 2019'
 #################################################################################################################################################
 
 import math, time, sys, getopt, os
@@ -299,7 +299,7 @@ def main(argv=None):
     
     tic = time.clock()
     print('\nGlabTop2-py is developed by Wilco Terink\n')
-    print('Version 2.0.0\n')
+    print('Version 2.0.1\n')
     glabtop = GlabTop2(cfgfile)
     glabtop.run()
 
