@@ -29,7 +29,7 @@ try:
     import pcraster as pcr
 except:
     print('Could not import pcraster, make sure it is installed including the python extensions.')
-    print('GlabTop2-py uses pcraster version 4.2.1')
+    print('GlabTop2-py requires pcraster version 4.2.1 or later versions.')
     print('See http://pcraster.geo.uu.nl/downloads/latest-release/')
     sys.exit()
 
