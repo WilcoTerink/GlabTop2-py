@@ -297,13 +297,13 @@ def main(argv=None):
         print('python -m GlabTop2.main -i <config file>')
         sys.exit()
     
-    tic = time.clock()
+    tic = time.perf_counter()
     print('\nGlabTop2-py is developed by Wilco Terink\n')
     print('Version 2.0.1\n')
     glabtop = GlabTop2(cfgfile)
     glabtop.run()
 
-    toc = time.clock()
+    toc = time.perf_counter()
     
     print('\nGlabTop2-py finished in %.2f minutes' %((toc-tic)/60.))
 
