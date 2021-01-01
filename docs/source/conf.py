@@ -40,6 +40,7 @@ release = u'2.0.2'
 # ones.
 extensions = ['sphinxcontrib.bibtex', 'sphinx.ext.autodoc',
     'sphinx.ext.viewcode']
+bibtex_bibfiles = ['references.bib']
 
 numfig = True
 numfig_format = {'figure': 'Figure %s'}
