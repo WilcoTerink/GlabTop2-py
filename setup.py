@@ -10,14 +10,14 @@ here = os.path.abspath(os.path.dirname(__file__))
 name = 'GlabTop2-py'
 main_package = 'GlabTop2'
 # datasets = 'datasets'
-version = '2.0.1'
+version = '2.0.2'
 descrip = 'GlabTop2 (Glacier bed Topography) model'
 
 try:
     import pcraster as pcr
 except:
     print('Could not import pcraster, make sure it is installed including the python extensions.')
-    print('GlabTop2-py uses pcraster version 4.2.1')
+    print('GlabTop2-py uses pcraster version 4.3.0')
     print('See http://pcraster.geo.uu.nl/downloads/latest-release/')
 
 # The below code is for readthedocs. To have sphinx/readthedocs interact with
@@ -26,7 +26,7 @@ except:
 if os.environ.get('READTHEDOCS', False) == 'False':
     INSTALL_REQUIRES = []
 else:
-    INSTALL_REQUIRES = ['numpy', 'pandas', 'simpledbf', 'scipy']
+    INSTALL_REQUIRES = ['numpy', 'pandas', 'geopandas', 'scipy']
 
 # Get the long description from the README file
 with open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
@@ -127,6 +127,8 @@ setup(
         # that you indicate whether you support Python 2, Python 3 or both.
 
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
 
     ],
 
@@ -198,5 +200,5 @@ setup(
     #    ],
     # },
     license='GPL-3.0',
-    python_requires=">=3.6",
+    python_requires=">=3.6, <=3.8",
 )

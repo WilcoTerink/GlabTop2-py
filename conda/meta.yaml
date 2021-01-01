@@ -1,6 +1,6 @@
 {% set name = "GlabTop2-py" %}
-{% set version = "2.0.1" %}
-{% set sha256 = "f92203125b16d1ccd5c832db3170b0b6f7179d902d9645f7be2bee1f577dee87" %}
+{% set version = "2.0.2" %}
+{% set sha256 = "c1be42db7dc982ac7608e9d3987810240434655b9dcb02bc8e944980b23d43f8" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.
@@ -35,15 +35,19 @@ requirements:
     - python
     - setuptools
   run:
-    - python
+    - python >=3.6,<=3.8
     - pandas
     - numpy
-    - simpledbf
+    - geopandas
     - scipy
+    - pcraster
 
 test:
   imports:
+    - pcraster
     - GlabTop2
+#  commands:
+#    - python -m GlabTop2.main
 
 about:
   home: https://github.com/WilcoTerink/GlabTop2-py

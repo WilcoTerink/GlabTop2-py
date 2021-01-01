@@ -10,7 +10,7 @@ Installation
    
    http://pcraster.geo.uu.nl/downloads/latest-release/
    
-   GlabTop2-py was developed using PCRaster version 4.2.1 and Python 3.6 (both 64 bits).
+   GlabTop2-py was developed using PCRaster version 4.3.0 and Python 3.6, 3.7, or 3.8 (64 bits).
 
 
 This page describes how you can install GlabTop2-py. There are three ways of installing GlabTop2-py:
@@ -57,10 +57,6 @@ this is because Anaconda checks for dependencies, installs missing dependencies 
 download Anaconda Python:
 
     + `Python <https://repo.anaconda.com/archive/Anaconda3-2019.03-Windows-x86_64.exe>`_
-    
-By default this installs Python version 3.7. Momentarily, PCRaster only works with Python version 3.6. Therefore, you need to downgrade the Python installation using::
-
-   conda install python=3.6 
     
 .. _installation_anaconda:
 

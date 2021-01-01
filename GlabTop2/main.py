@@ -20,8 +20,8 @@
 #-Authorship information-########################################################################################################################
 __author__ = 'Wilco Terink'
 __copyright__ = 'Wilco Terink'
-__version__ = '2.0.1'
-__date__ ='July 2019'
+__version__ = '2.0.2'
+__date__ ='January 2021'
 #################################################################################################################################################
 
 import math, time, sys, getopt, os
@@ -29,7 +29,7 @@ try:
     import pcraster as pcr
 except:
     print('Could not import pcraster, make sure it is installed including the python extensions.')
-    print('GlabTop2-py requires pcraster version 4.2.1 or later versions.')
+    print('GlabTop2-py requires pcraster version 4.3.0 or later versions.')
     print('See http://pcraster.geo.uu.nl/downloads/latest-release/')
     sys.exit()
 
@@ -37,7 +37,7 @@ import pandas as pd
 import numpy as np
 import configparser
 from scipy.interpolate import griddata
-from simpledbf import Dbf5
+import geopandas as gpd
 
 class GlabTop2():
     def __init__(self, cfgfile):
@@ -54,9 +54,8 @@ class GlabTop2():
         self.input_path = self.config.get('FOLDERS', 'input_path')
         self.results_path = self.config.get('FOLDERS', 'results_path')
         
-        #-Read the RGI dbf as a pandas dataframe and add columns for dH, dH_dem, hmin, and Tau
-        rgi = Dbf5(os.path.join(self.input_path, self.config.get('INPUT_FILES', 'rgiDBF')))
-        rgi = rgi.to_dataframe()
+        #-Read the RGI dbf as a geopandas dataframe and add columns for dH, dH_dem, hmin, and Tau
+        rgi = gpd.read_file(os.path.join(self.input_path, self.config.get('INPUT_FILES', 'rgiDBF')))
         #-unique glacier ids
         self.uIDs = pd.unique(rgi['GLACID'])
         rgi.set_index('GLACID', inplace=True)
@@ -299,7 +298,7 @@ def main(argv=None):
     
     tic = time.perf_counter()
     print('\nGlabTop2-py is developed by Wilco Terink\n')
-    print('Version 2.0.1\n')
+    print('Version 2.0.2\n')
     glabtop = GlabTop2(cfgfile)
     glabtop.run()
 

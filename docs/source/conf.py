@@ -24,9 +24,9 @@ copyright = u'2019, Wilco Terink'
 author = u'Wilco Terink'
 
 # The short X.Y version
-version = u'2.0.1'
+version = u'2.0.2'
 # The full version, including alpha/beta/rc tags
-release = u'2.0.1'
+release = u'2.0.2'
 
 
 # -- General configuration ---------------------------------------------------
