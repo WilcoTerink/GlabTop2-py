@@ -2,8 +2,18 @@ Welcome to the documentation of "GlabTop2-py"
 =============================================
 
 This document describes **GlabTop2-py**, which is a Python package that calculates the ice-thickness distribution for
-all glaciers in the model domain. GlabTop2-py uses Python 3.6, 3.7, or 3.8, and PCRaster functionalities. GlabTop2-py is entirely based on the
+all glaciers in the model domain. GlabTop2-py uses Python 3.11 or a later version, and PCRaster functionalities. GlabTop2-py is entirely based on the
 GlabTop2 concepts :cite:`Frey2014`, which are well-described `here <https://www.the-cryosphere.net/8/2313/2014/tc-8-2313-2014.pdf>`_.
+
+.. note::
+
+   Latest release: 2.0.3.
+   
+   GlabTop2 now works with Python versions >= 3.11.
+
+   PCRaster will now be automatically installed if GlabTop2-py is installed using :ref:`Anaconda <installation_anaconda>`.
+   Manual installation of PCRaster is still required if GlabTop2-py is installed using :ref:`pip <installation_pip>` or manually
+   downloaded from my `GlabTop2-py GitHub repository <https://github.com/WilcoTerink/GlabTop2-py>`_.
 
 Contents
 ========

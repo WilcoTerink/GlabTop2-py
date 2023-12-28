@@ -6,11 +6,12 @@ Installation
 
 .. note::
 
-   GlabTop2-py requires the PCRaster dynamic modelling framework, which needs to be downloaded from:
+   If GlabTop2-py is NOT installed using the :ref:`Anaconda <installation_anaconda>` package manager, then a
+   manual installation of the PCRaster dynamic modelling framework is required. This can be downloaded from:
    
    http://pcraster.geo.uu.nl/downloads/latest-release/
-   
-   GlabTop2-py was developed using PCRaster version 4.3.0 and Python 3.6, 3.7, or 3.8 (64 bits).
+
+   Installation through Anaconda is therefore strongly recommended.
 
 
 This page describes how you can install GlabTop2-py. There are three ways of installing GlabTop2-py:
@@ -23,7 +24,7 @@ This page describes how you can install GlabTop2-py. There are three ways of ins
    
        pip install GlabTop2-py
    
-   2. Downloading the source code from the `GlabTop2-py GitHub repository <https://github.com/WilcoTerink/GlabTop2-py>`_
+   3. Downloading the source code from the `GlabTop2-py GitHub repository <https://github.com/WilcoTerink/GlabTop2-py>`_
    
 Each of these installation methods is described in detail in the sections below. The recommended installation is the
 **Anaconda** method.

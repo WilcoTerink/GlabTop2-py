@@ -20,24 +20,25 @@
 #-Authorship information-########################################################################################################################
 __author__ = 'Wilco Terink'
 __copyright__ = 'Wilco Terink'
-__version__ = '2.0.2'
-__date__ ='January 2021'
+__version__ = '2.0.3'
+__date__ ='December 2023'
 #################################################################################################################################################
 
 import math, time, sys, getopt, os
-try:
-    import pcraster as pcr
-except:
-    print('Could not import pcraster, make sure it is installed including the python extensions.')
-    print('GlabTop2-py requires pcraster version 4.3.0 or later versions.')
-    print('See http://pcraster.geo.uu.nl/downloads/latest-release/')
-    sys.exit()
+# try:
+#     import pcraster as pcr
+# except:
+#     print('Could not import pcraster, make sure it is installed including the python extensions.')
+#     print('GlabTop2-py requires pcraster version 4.3.0 or later versions.')
+#     print('See http://pcraster.geo.uu.nl/downloads/latest-release/')
+#     sys.exit()
 
 import pandas as pd
 import numpy as np
 import configparser
 from scipy.interpolate import griddata
 import geopandas as gpd
+import pcraster as pcr
 
 class GlabTop2():
     def __init__(self, cfgfile):
@@ -298,7 +299,7 @@ def main(argv=None):
     
     tic = time.perf_counter()
     print('\nGlabTop2-py is developed by Wilco Terink\n')
-    print('Version 2.0.2\n')
+    print(f'Version {__version__}\n')
     glabtop = GlabTop2(cfgfile)
     glabtop.run()
 
