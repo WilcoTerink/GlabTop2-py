@@ -1,11 +1,11 @@
-name: glabtop2
+#name: glabtop2
 channels:
   - conda-forge
   - WilcoTerink
   - defaults
 dependencies:
-  #- python=3.11
-  - GlabTop2-py
+  - python=3.11
+  #- GlabTop2-py
   - configparser
   - subprocess
-  #- streamlit=1.29.0
+  - streamlit=1.29.0
