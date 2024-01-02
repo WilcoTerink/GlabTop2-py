@@ -160,5 +160,5 @@ with c1:
         st.markdown('- A high-resolution DEM in [PCRaster scalar format](https://pcraster.geo.uu.nl/pcraster/4.4.0/documentation/pcraster_manual/sphinx/secdatbase.html#formscalar)')
         st.markdown('- A raster with gridded glacier outlines (of glaciers found in the provided shapefile). This map should have the same extent and spatial resolution of the DEM, and should be formatted as a [nominal PCRaster map](https://pcraster.geo.uu.nl/pcraster/4.4.0/documentation/pcraster_manual/sphinx/secdatbase.html#formnominal)')
         
-        st.image('../../docs/source/images/example_ice_depths.png', caption='Figure 1: raster output with ice-thickness.', width=600)
-        st.image('../../docs/source/images/example_csv_output.png', caption='Figure 2: csv-file with glacier properties.', width=600)
+        # st.image('../../docs/source/images/example_ice_depths.png', caption='Figure 1: raster output with ice-thickness.', width=600)
+        # st.image('../../docs/source/images/example_csv_output.png', caption='Figure 2: csv-file with glacier properties.', width=600)
