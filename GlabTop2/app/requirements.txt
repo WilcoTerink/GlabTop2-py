@@ -1,4 +1,4 @@
-python==3.11
+python>=3.11
 streamlit==1.29.0
 GlabTop2-py
 # #name: glabtop2
