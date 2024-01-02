@@ -5,5 +5,5 @@ channels:
   - defaults
 dependencies:
   - python=3.11
-  - GlabTop2-py
+  - GlabTop2-py=2.0.3
   - streamlit=1.29.0
