@@ -134,7 +134,7 @@ with c1:
         st.text(f'version {__version__}')
         st.text('Copyright (C) 2018 Wilco Terink')
 
-        st.image('../../docs/source/images/franz_josef.jpg', width=400)#, use_column_width='always')
+        # st.image('../../docs/source/images/franz_josef.jpg', width=400)#, use_column_width='always')
 
         st.markdown("<h2 style='text-align: left; color: #6897bb;'>About</h2>", unsafe_allow_html=True)
         st.write('GlabTop2-py enables you to calculates the ice-thickness distribution for all glaciers in your area of interest. This \
