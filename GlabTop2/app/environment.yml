@@ -4,6 +4,8 @@ channels:
   - WilcoTerink
   - defaults
 dependencies:
-  - python=3.11
-  #- GlabTop2-py
-  - streamlit=1.29.0
+  #- python=3.11
+  - GlabTop2-py
+  - configparser
+  - subprocess
+  #- streamlit=1.29.0
