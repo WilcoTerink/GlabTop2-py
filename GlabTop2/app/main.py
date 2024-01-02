@@ -134,7 +134,8 @@ with c1:
         st.text(f'version {__version__}')
         st.text('Copyright (C) 2018 Wilco Terink')
 
-        st.image('../../docs/source/images/franz_josef.jpg', width=400)#, use_column_width='always')
+        #st.image('../../docs/source/images/franz_josef.jpg', width=400)#, use_column_width='always')
+        st.image('images/franz_josef.jpg', width=400)#, use_column_width='always')
 
         st.markdown("<h2 style='text-align: left; color: #6897bb;'>About</h2>", unsafe_allow_html=True)
         st.write('GlabTop2-py enables you to calculates the ice-thickness distribution for all glaciers in your area of interest. This \
@@ -160,5 +161,7 @@ with c1:
         st.markdown('- A high-resolution DEM in [PCRaster scalar format](https://pcraster.geo.uu.nl/pcraster/4.4.0/documentation/pcraster_manual/sphinx/secdatbase.html#formscalar)')
         st.markdown('- A raster with gridded glacier outlines (of glaciers found in the provided shapefile). This map should have the same extent and spatial resolution of the DEM, and should be formatted as a [nominal PCRaster map](https://pcraster.geo.uu.nl/pcraster/4.4.0/documentation/pcraster_manual/sphinx/secdatbase.html#formnominal)')
         
-        st.image('../../docs/source/images/example_ice_depths.png', caption='Figure 1: raster output with ice-thickness.', width=600)
-        st.image('../../docs/source/images/example_csv_output.png', caption='Figure 2: csv-file with glacier properties.', width=600)
+        #st.image('../../docs/source/images/example_ice_depths.png', caption='Figure 1: raster output with ice-thickness.', width=600)
+        st.image('images/example_ice_depths.png', caption='Figure 1: raster output with ice-thickness.', width=600)
+        #st.image('../../docs/source/images/example_csv_output.png', caption='Figure 2: csv-file with glacier properties.', width=600)
+        st.image('images/example_csv_output.png', caption='Figure 2: csv-file with glacier properties.', width=600)
