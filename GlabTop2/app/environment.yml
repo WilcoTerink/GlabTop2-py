@@ -1,0 +1,9 @@
+name: glabtop2
+channels:
+  - conda-forge
+  - WilcoTerink
+  - defaults
+dependencies:
+  - python=3.11
+  - GlabTop2-py
+  - streamlit=1.29.0
