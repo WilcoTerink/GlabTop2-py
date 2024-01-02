@@ -4,8 +4,7 @@ channels:
   - WilcoTerink
   - defaults
 dependencies:
+  - conda
   - python=3.11
   #- GlabTop2-py
-  - configparser
-  - subprocess
   - streamlit=1.29.0
