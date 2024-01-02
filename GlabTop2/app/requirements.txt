@@ -1,5 +1,5 @@
 streamlit == 1.29.0
-GlabTop2-py
+pcraster
 # #name: glabtop2
 # channels:
 #   - conda-forge
