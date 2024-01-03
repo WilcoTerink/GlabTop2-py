@@ -11,7 +11,7 @@ Installation
    
    http://pcraster.geo.uu.nl/downloads/latest-release/
 
-   Installation through Anaconda is therefore strongly recommended.
+   Installation through Anaconda is therefore strongly recommended. This also enables the use of the :ref:`GlabTop2-py App <running_app>` in the browser.
 
 
 This page describes how you can install GlabTop2-py. There are three ways of installing GlabTop2-py:

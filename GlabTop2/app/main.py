@@ -134,7 +134,6 @@ with c1:
         st.text(f'version {__version__}')
         st.text('Copyright (C) 2018 Wilco Terink')
 
-        #st.image('../../docs/source/images/franz_josef.jpg', width=400)#, use_column_width='always')
         st.image('images/franz_josef.jpg', width=400)#, use_column_width='always')
 
         st.markdown("<h2 style='text-align: left; color: #6897bb;'>About</h2>", unsafe_allow_html=True)
@@ -157,11 +156,9 @@ with c1:
 
         st.write('GlabTop2 is executed by going through the steps in the left panel. You should have one folder on your hard drive \
             where the required input files are stored. The following input is required:')
-        st.markdown('- A shapefile with the outlines of the glaciers within your area of interest. The [Randolph Glacier Inventory (RGI)](https://www.glims.org/RGI/) is a recommended source for this. Make sure the shapefile attribute table contains a "GLACID" column, which should be unique for each record in the attribute table.')
+        st.markdown('- A shapefile with the outlines of the glaciers within your area of interest. The [Randolph Glacier Inventory (RGI)](https://www.glims.org/RGI/) is a recommended source for this. Make sure the shapefile attribute table contains the columns GLACID, Area, Zmin, Zmax, Slope, and Lmax. GLACID should be unique for each record in the attribute table.')
         st.markdown('- A high-resolution DEM in [PCRaster scalar format](https://pcraster.geo.uu.nl/pcraster/4.4.0/documentation/pcraster_manual/sphinx/secdatbase.html#formscalar)')
         st.markdown('- A raster with gridded glacier outlines (of glaciers found in the provided shapefile). This map should have the same extent and spatial resolution of the DEM, and should be formatted as a [nominal PCRaster map](https://pcraster.geo.uu.nl/pcraster/4.4.0/documentation/pcraster_manual/sphinx/secdatbase.html#formnominal)')
         
-        #st.image('../../docs/source/images/example_ice_depths.png', caption='Figure 1: raster output with ice-thickness.', width=600)
         st.image('images/example_ice_depths.png', caption='Figure 1: raster output with ice-thickness.', width=600)
-        #st.image('../../docs/source/images/example_csv_output.png', caption='Figure 2: csv-file with glacier properties.', width=600)
         st.image('images/example_csv_output.png', caption='Figure 2: csv-file with glacier properties.', width=600)
