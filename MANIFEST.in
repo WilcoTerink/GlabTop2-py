@@ -2,3 +2,4 @@
 include GlabTop2/config.cfg
 include GlabTop2/test/*
 include GlabTop2/app/*
+include GlabTop2/app/images/*
