@@ -104,7 +104,8 @@ After GlabTop2-py has been installed you need to edit the ``config.cfg`` file. H
 model parameters. GlabTop2-py requires the following input:
 
   1. A shapefile with the outlines of the glaciers within your area of interest. The `Randolph Glacier Inventory (RGI) <https://www.glims.org/RGI/>`_ is a recommended source for this.
-     Make sure the shapefile attribute table contains a ``GLACID`` column, which should be unique for each record in the attribute table.
+     Make sure the shapefile attribute table contains the columns ``GLACID``, ``Area``, ``Zmin``, ``Zmax``, ``Slope``, and ``Lmax``.
+     ``GLACID`` should be unique for each record in the attribute table.
   2. A high-resolution DEM in PCRaster format (pcraster scalar).
   3. Gridded map of glacier outlines (of glaciers found in the shapefile under 1)). This map should have the same extent and spatial resolution of the DEM, and should be
      formatted as a nominal PCRaster map.

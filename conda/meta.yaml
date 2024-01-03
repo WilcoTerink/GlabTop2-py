@@ -1,6 +1,6 @@
 {% set name = "GlabTop2-py" %}
-{% set version = "2.0.3" %}
-{% set sha256 = "5b2612dd57529de99b951986ecd5d1f5c683c0a40673df7cc1227357c8818696" %}
+{% set version = "2.1.0" %}
+{% set sha256 = "c5b73e5768af1072d21862721fb07ecb3126b5e6a36a6dac2931c99bc77c6c3b" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.
@@ -41,6 +41,7 @@ requirements:
     - geopandas
     - scipy
     - pcraster
+    - streamlit
 
 test:
   imports:

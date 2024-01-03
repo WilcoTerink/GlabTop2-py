@@ -10,7 +10,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 name = 'GlabTop2-py'
 main_package = 'GlabTop2'
 # datasets = 'datasets'
-version = '2.0.3'
+version = '2.1.0'
 descrip = 'GlabTop2 (Glacier bed Topography) model'
 
 try:
@@ -26,7 +26,7 @@ except:
 if os.environ.get('READTHEDOCS', False) == 'False':
     INSTALL_REQUIRES = []
 else:
-    INSTALL_REQUIRES = ['numpy', 'pandas', 'geopandas', 'scipy']
+    INSTALL_REQUIRES = ['numpy', 'pandas', 'geopandas', 'scipy', 'streamlit']
 
 # Get the long description from the README file
 with open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
