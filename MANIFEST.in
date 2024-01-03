@@ -1,3 +1,4 @@
 # Include the configuration file
 include GlabTop2/config.cfg
 include GlabTop2/test/*
+include GlabTop2/app/*

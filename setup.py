@@ -10,7 +10,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 name = 'GlabTop2-py'
 main_package = 'GlabTop2'
 # datasets = 'datasets'
-version = '2.0.3.0'
+version = '2.0.3.2'
 descrip = 'GlabTop2 (Glacier bed Topography) model'
 
 try:
