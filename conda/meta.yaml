@@ -1,5 +1,5 @@
 {% set name = "GlabTop2-py" %}
-{% set version = "2.0.3.0" %}
+{% set version = "2.1.0" %}
 {% set sha256 = "5b2612dd57529de99b951986ecd5d1f5c683c0a40673df7cc1227357c8818696" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
