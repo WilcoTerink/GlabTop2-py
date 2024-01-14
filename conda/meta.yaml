@@ -31,6 +31,10 @@ build:
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
+  channels:
+    - conda-forge
+    - WilcoTerink
+    - defaults
   build:
     - python
     - setuptools
