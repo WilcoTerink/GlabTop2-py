@@ -20,7 +20,7 @@
 #-Authorship information-########################################################################################################################
 __author__ = 'Wilco Terink'
 __copyright__ = 'Wilco Terink'
-__version__ = '2.1.0'
+__version__ = '2.1.1'
 __date__ ='January 2024'
 #################################################################################################################################################
 
@@ -146,7 +146,7 @@ class GlabTop2():
     #-calculate shear stress (kPa) using dH (m)
     def shearStress(self, dH):
         dH = dH/1000 #-convert to km
-        if dH > 1600:
+        if dH > 1.6:
             Tau = 150
         else:
             Tau = 0.5 + (159.8 * dH) - (43.5 * dH**2) 

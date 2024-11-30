@@ -10,14 +10,14 @@ here = os.path.abspath(os.path.dirname(__file__))
 name = 'GlabTop2-py'
 main_package = 'GlabTop2'
 # datasets = 'datasets'
-version = '2.1.0'
+version = '2.1.1'
 descrip = 'GlabTop2 (Glacier bed Topography) model'
 
 try:
     import pcraster as pcr
 except:
     print('Could not import pcraster, make sure it is installed including the python extensions.')
-    print('GlabTop2-py uses pcraster version 4.4.1')
+    print('GlabTop2-py uses pcraster version 4.4.0')
     print('See http://pcraster.geo.uu.nl/downloads/latest-release/')
 
 # The below code is for readthedocs. To have sphinx/readthedocs interact with

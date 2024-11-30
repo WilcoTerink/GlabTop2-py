@@ -5,7 +5,7 @@ GlabTop2-py is a Python package that calculates the ice-thickness distribution f
 all glaciers in the model domain. GlabTop2-py uses Python 3.11 or a later version, and PCRaster functionalities. GlabTop2-py is entirely based on the
 GlabTop2 concepts as described by `Frey et al., 2014 <https://www.the-cryosphere.net/8/2313/2014/tc-8-2313-2014.pdf>`_.
 
-The latest version is 2.1.0
+The latest version is 2.1.1
 
 Documentation
 -------------

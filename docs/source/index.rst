@@ -7,14 +7,14 @@ GlabTop2 concepts :cite:`Frey2014`, which are well-described `here <https://www.
 
 .. note::
 
-   Latest release: 2.1.0
+   Latest release: 2.1.1
    
    GlabTop2-py is now available as an :ref:`App <running_app>` that runs in the browser.
    
    GlabTop2-py works with Python versions >= 3.11.
 
    PCRaster will now be automatically installed if GlabTop2-py is installed using :ref:`Anaconda <installation_anaconda>`.
-   Manual installation of PCRaster is still required if GlabTop2-py is installed using :ref:`pip <installation_pip>` or manually
+   Manual installation of PCRaster version 4.0.0 is still required if GlabTop2-py is installed using :ref:`pip <installation_pip>` or manually
    downloaded from my `GlabTop2-py GitHub repository <https://github.com/WilcoTerink/GlabTop2-py>`_.
 
 Contents

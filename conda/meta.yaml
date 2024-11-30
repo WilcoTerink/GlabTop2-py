@@ -1,6 +1,6 @@
 {% set name = "GlabTop2-py" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "c5b73e5768af1072d21862721fb07ecb3126b5e6a36a6dac2931c99bc77c6c3b" %}
+{% set version = "2.1.1" %}
+{% set sha256 = "0ef4603d5f966a3118f7cac4f5ce379e651ea69ea18ab2873db3b382e55fb1ea" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.
@@ -13,7 +13,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/g/GlabTop2-py/glabtop2_py-2.1.1.tar.gz
   # If getting the source from GitHub remove the line above
   # uncomment the line below and modify as needed
   # url: https://github.com/simplejson/{{ name }}/archive/{{ version }}.tar.gz
@@ -39,12 +40,12 @@ requirements:
     - python
     - setuptools
   run:
-    - python >=3.11
+    - python=3.11
     - pandas
     - numpy
     - geopandas
     - scipy
-    - pcraster
+    - pcraster=4.4.0
     - streamlit
 
 test:
